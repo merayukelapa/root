@@ -1,0 +1,78 @@
+"use client";
+import { useRef } from "react";
+import MapGL, { type MapRef, Marker } from "react-map-gl/maplibre";
+import "maplibre-gl/dist/maplibre-gl.css";
+import * as m from "@/lib/motion";
+import { Badge } from "./ui/badge";
+
+export function MapCard() {
+  const mapRef = useRef<MapRef>(null);
+
+  const LNG = 106.57341;
+  const LAT = -5.656435;
+
+  return (
+    <section className="space-y-1">
+      <m.h2
+        initial={{
+          y: 20,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{ duration: 0.4, ease: "easeOut", delay: 0.15 }}
+        className="font-medium text-lg text-white text-center"
+      >
+        Lokasi
+      </m.h2>
+      <m.div
+        initial={{
+          y: 20,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+        className="relative h-90 w-full overflow-clip rounded-2xl shadow-sm ring-1 ring-foreground/10 bg-white"
+      >
+        <Badge
+          variant="outline"
+          className="absolute bottom-4 left-1/2 z-30 -translate-x-1/2 bg-white"
+        >
+          Kepulauan Seribu, DKI Jakarta
+        </Badge>
+        <MapGL
+          ref={mapRef}
+          attributionControl={false}
+          initialViewState={{
+            longitude: LNG,
+            latitude: LAT,
+            zoom: 4,
+            pitch: 0,
+          }}
+          onLoad={() => {
+            mapRef.current?.flyTo({
+              center: [LNG, LAT],
+              zoom: 12,
+              pitch: 70,
+              duration: 3000,
+            });
+          }}
+          style={{ width: "100%", height: "100%" }}
+          mapStyle="https://tiles.openfreemap.org/styles/bright"
+        >
+          <Marker longitude={LNG} latitude={LAT} anchor="center">
+            <div className="relative flex h-4 w-4">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex h-4 w-4 rounded-full bg-primary"></span>
+            </div>
+          </Marker>
+        </MapGL>
+      </m.div>
+    </section>
+  );
+}
