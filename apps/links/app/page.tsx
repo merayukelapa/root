@@ -93,9 +93,7 @@ export default function Page() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="text-center"
         >
-          <h1 className="font-serif text-white text-6xl">
-            Merayu Kelapa
-          </h1>
+          <h1 className="font-serif text-white text-6xl">Merayu Kelapa</h1>
 
           <div className="relative mx-auto mt-2 size-28">
             <Image
@@ -108,7 +106,8 @@ export default function Page() {
           </div>
 
           <p className="mt-2 text-white text-sm text-muted-foreground">
-            KKN-PPM UGM PERIODE II 2026 Kecamatan Kep. Seribu Utara, Kepulauan Seribu, DKI Jakarta
+            KKN-PPM UGM PERIODE II 2026 Kep. Seribu Utara, Kepulauan Seribu, DKI
+            Jakarta
           </p>
         </m.div>
 
@@ -211,7 +210,6 @@ export default function Page() {
           </div>
         </section>
 
-        
         <Footer />
       </main>
     </div>
