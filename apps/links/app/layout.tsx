@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Links | KKN-PPM UGM Merayu Kelapa 2026",
-  description: "Kumpulan tautan Merayu Kelapa KKN-PPN UGM Kepulauan Seribu 2026",
+  description: "Merayu Kelapa | KKN-PPN UGM Kepulauan Seribu 2026",
 };
 
 export default function RootLayout({
