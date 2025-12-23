@@ -22,6 +22,13 @@ import {
 } from "@/components/ui/card";
 import * as m from "@/lib/motion";
 import { cn } from "@/lib/utils";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 const SOCIAL_MEDIA = [
   {
@@ -74,6 +81,18 @@ const LINKS = [
     href: "/assets/poster.png",
     download: true,
   },
+];
+
+const IMAGES = [
+  "/assets/gallery1.webp",
+  "/assets/gallery2.webp",
+  "/assets/gallery3.webp",
+  "/assets/gallery4.webp",
+  "/assets/gallery5.webp",
+  "/assets/gallery6.webp",
+  "/assets/gallery7.webp",
+  "/assets/gallery8.webp",
+  "/assets/gallery9.webp",
 ];
 
 export default function Page() {
@@ -181,6 +200,45 @@ export default function Page() {
         </section>
 
         <MapCard />
+
+        <section className="space-y-1">
+          <m.h2
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.15 }}
+            className="font-medium text-lg text-white text-center"
+          >
+            Galeri
+          </m.h2>
+
+          <m.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+            className="relative w-full overflow-visible rounded-2xl shadow-sm ring-1 ring-foreground/10"
+          >
+            <Carousel className="w-full">
+              <CarouselContent>
+                {IMAGES.map((src, i) => (
+                  <CarouselItem key={i}>
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+                      <Image
+                        src={src}
+                        alt={`Galeri ${i + 1}`}
+                        fill
+                        sizes="100%"
+                        className="object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </m.div>
+        </section>
 
         <section className="space-y-1">
           <m.h2
