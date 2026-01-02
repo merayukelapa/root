@@ -43,7 +43,7 @@ export function MapCard() {
           variant="outline"
           className="absolute bottom-4 left-1/2 z-30 -translate-x-1/2 bg-white"
         >
-          Kepulauan Seribu, DKI Jakarta
+          Kepulauan Seribu, Daerah Khusus Jakarta
         </Badge>
         <MapGL
           ref={mapRef}

@@ -51,34 +51,34 @@ const LINKS = [
     iconClass: "",
     title: "Open Recruitment",
     description: "Segera bergabung!",
-    href: "/",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSepaSQ1ut1jMd70M7fOGr2w4NnQVQHlycWITaaNicLAQx5UmA/viewform",
     cardClass: "bg-white",
   },
   {
     icon: IconContract,
     iconClass: "",
     title: "Surat Kesanggupan Komitmen",
-    href: "/",
+    href: "https://docs.google.com/document/d/1qD0BtLgSr_BlZlil79RJlXo0Fk_tWwtcO97PDXRIm1E/edit?usp=sharing",
     cardClass: "bg-white",
   },
   {
     icon: IconUserCheck,
     iconClass: "",
-    title: "Surat Izin Orang Tua",
-    href: "/",
+    title: "Surat Izin Orang Tua/Wali",
+    href: "https://docs.google.com/document/d/1et8MTLKmwFjKsKXAf7adu55enA5zsKtaCjpQd9NGBV4/edit?usp=sharing",
     cardClass: "bg-white",
   },
   {
     icon: IconFile,
     iconClass: "",
     title: "Guidebook",
-    href: "/assets/guidebook.pdf",
+    href: "/assets/Guidebook Merayu Kelapa 2026.pdf",
   },
   {
     icon: IconPolaroid,
     iconClass: "",
     title: "Poster",
-    href: "/assets/poster.png",
+    href: "/assets/Poster Merayu Kelapa 2026.png",
     download: true,
   },
 ];
@@ -125,8 +125,8 @@ export default function Page() {
           </div>
 
           <p className="mt-2 text-white text-sm text-muted-foreground">
-            KKN-PPM UGM PERIODE II 2026 Kep. Seribu Utara, Kepulauan Seribu, DKI
-            Jakarta
+            KKN-PPM UGM PERIODE II 2026 Kep. Seribu Utara, Kepulauan Seribu,
+            Daerah Khusus Jakarta
           </p>
         </m.div>
 
